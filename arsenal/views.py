@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 
-# Create your views here.
+from stadia.models import Team,Pundit,Opinion
+
+
+def index(request):
+    latest_reviews = Opinion.objects.filter(team="arsenal")
+    context = {'latest_reviews': latest_reviews}
+    return render(request, 'arsenal/index.html', context)
