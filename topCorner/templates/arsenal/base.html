@@ -1,108 +1,71 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html>
+
 <head>
-  <!-- Site made with Mobirise Website Builder v4.2.4, https://mobirise.com -->
+  <meta charset="utf-8">
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.2.4, mobirise.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/80-512x512.png" type="image/x-icon">
-  <meta name="description" content="">
+  <link rel="shortcut icon" href="{% static "assets/images/excalibur-64x128.png " type="image/x-icon " %}">
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="{% static "assets/bootstrap-material-design-font/css/material.css" %}">
+  <link rel="stylesheet" href="{% static "assets/et-line-font-plugin/style.css" %}">
+  <link rel="stylesheet" href="{% static "assets/tether/tether.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/animate.css/animate.min.css" %}">
+  <link rel="stylesheet" href="{% static "assets/dropdown/css/style.css" %}">
+  <link rel="stylesheet" href="{% static "assets/theme/css/style.css" %}">
+  <link rel="stylesheet" href="{% static "assets/mobirise-gallery/style.css" %}">
+  <link rel="stylesheet" href="{% static "assets/mobirise/css/mbr-additional.css" type="text/css" %}">
+  <link rel="stylesheet" href="{% static "assets/socicon/css/styles.css" %}">
+
   <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
+
 </head>
+
 <body>
-<section class="menu cid-qwemIU0AiY" once="menu" id="menu1-0" data-rv-view="66">
 
-    
 
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="#">
-                         <img src="assets/images/80-512x512.png" alt="Mobirise" title="" media-simple="true" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-secondary display-4" href="https://mobirise.com">
-                        Top Corner</a></span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.com">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-                        Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.com">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                        About Us
-                    </a>
-                </li></ul>
-            
-        </div>
-    </nav>
+<section>
+            {% block content %}
+            {% endblock %}
 </section>
 
-<section class="engine"><a href="https://mobirise.co">Mobirise</a></section><section class="mbr-section content4 cid-qweNUMVX4a" id="content4-4" data-rv-view="68">
 
-    
+
+
+<footer>
 
     <div class="container">
-        <div class="media-container-row">
-            <div class="title col-12 col-md-8">
-                <h2 class="align-center pb-3 mbr-fonts-style display-2">
-                    Title Block</h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5"></h3>
-                
-            </div>
-        </div>
+        <p class="text-xs-center">Copyright (c) 2017 Afrotech Frenzy.</p>
     </div>
-</section>
+</footer>
 
-<section class="mbr-section article content1 cid-qweOdMgVI3" id="content1-6" data-rv-view="70">
-    
-     
+<script src="{% static "assets/social-likes/social-likes.js"%}"></script>
+<script src="{% static "assets/web/assets/jquery/jquery.min.js" %}"></script>
+<script src="{% static "assets/tether/tether.min.js" %}"></script>
+<script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "assets/smooth-scroll/smooth-scroll.js" %}"></script>
+<script src="{% static "assets/viewport-checker/jquery.viewportchecker.js" %}"></script>
+<script src="{% static "assets/dropdown/js/script.min.js" %}"></script>
+<script src="{% static "assets/touch-swipe/jquery.touch-swipe.min.js" %}"></script>
+<script src="{% static "assets/jquery-mb-ytplayer/jquery.mb.ytplayer.min.js" %}"></script>
+<script src="{% static "assets/masonry/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "assets/imagesloaded/imagesloaded.pkgd.min.js" %}"></script>
+<script src="{% static "assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js" %}"></script>
+<script src="{% static "assets/theme/js/script.js" %}"></script>
+<script src="{% static "assets/mobirise-gallery/player.min.js" %}"></script>
+<script src="{% static "assets/mobirise-gallery/script.js" %}"></script>
+<script src="{% static "assets/jarallax/jarallax.js" %}"></script>
 
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
-                <strong> Review!</strong>&nbsp; Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website development tools <a href="https://mobirise.com/">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-            </div>
-        </div>
-    </div>
-</section>
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
-  <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  
-  
-</body>
+  <input name="animation" type="hidden">
+  </body>
 </html>

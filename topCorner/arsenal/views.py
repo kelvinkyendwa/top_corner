@@ -11,3 +11,6 @@ class ArsenalView(ListView):
 
     template_name = "arsenal/index.html"
     model = Opinion
+class ArsenalReview(DetailView):
+    template_name = "arsenal/reviews.html"
+    model = Opinion
