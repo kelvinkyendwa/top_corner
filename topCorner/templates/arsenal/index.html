@@ -1,22 +1,26 @@
 {% extends 'arsenal/base.html' %}
 {% load staticfiles %}
 {% block content %}
+
+
 <div class="container">
 
   <h1>Arsenal Reviews</h1>
   <hr><br><br>
-</div>
 {% for revs in object_list %}
+
 
 
 <div class="container">
 
   <h2>   {{ revs.title }} - {{ revs.game_date }}</h2><a href="{% url 'arsenal:review' pk=revs.pk  %}" class="btn btn-success">Review</a>
 <br><hr>
+
+</div>
+
 {% empty %}
 <div class="container jumbotron">No Game yet .</div>
 {% endfor %}
 
-</div>
-
 {% endblock %}
+</div>

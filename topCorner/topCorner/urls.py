@@ -17,6 +17,7 @@ from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^$', include('stadia.urls')),
     url(r'^arsenal/', include('arsenal.urls')),
     url(r'^manutd/', include('manutd.urls')),
     url(r'^admin/', admin.site.urls),
