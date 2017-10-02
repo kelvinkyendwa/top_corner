@@ -1,0 +1,15 @@
+{% extends 'arsenal/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+
+  <br>
+  <h1>How it went Down at {{opinion.title}}</h1>
+  <hr>
+  <img src="{{opinion.logo_url}}" alt="" class="img-responsive" width="350">
+    <hr>
+  <p>{{opinion.game_review}}</p>
+  <a href="{% url 'arsenal:home' %}" class="btn btn-warning">back</a>
+</div>
+  <hr>
+{% endblock %}

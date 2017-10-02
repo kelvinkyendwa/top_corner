@@ -11,6 +11,10 @@ class ArsenalView(ListView):
 
     template_name = "arsenal/index.html"
     model = Opinion
+
+    def get_queryset(self):
+        return Opinion.objects.filter(team__name__icontains='arsenal')
+
 class ArsenalReview(DetailView):
     template_name = "arsenal/reviews.html"
     model = Opinion
