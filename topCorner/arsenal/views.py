@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import FormView, DetailView
+from django.views.generic import FormView, DetailView,View
 from django.views.generic.list import ListView
+from arsenal.forms import OpinionForm
 
 from stadia.models import Team,Pundit,Opinion
 
@@ -18,3 +19,4 @@ class ArsenalView(ListView):
 class ArsenalReview(DetailView):
     template_name = "arsenal/reviews.html"
     model = Opinion
+

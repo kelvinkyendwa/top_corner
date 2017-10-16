@@ -1,0 +1,41 @@
+{% extends 'arsenal/base.html' %}
+{% block title %} News {% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <br>
+    <h1 class="header">News Items</h1>
+    <br> {% for news in object_list %}
+    <div class="media-container-row">
+        <div class="card col-12 col-md-12 col-lg-12">
+            <div class="card-wrapper">
+                <div class="card-img">
+                    <img src="assets/images/01.jpg" alt="" media-simple="true">
+                </div>
+                <div class="card-box">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        {{ news.title }}
+                    </h4>
+                    <br> <br>
+
+                    <p class="mbr-text mbr-fonts-style display-7"> {{ news.text}} </p>
+                   
+                </div>
+            </div>
+            <h4 class="warning">{{news.published_date}}</h4>
+           
+          
+        </div>
+        <br> <br>
+        {% empty %}
+        <div class="container jumbotron">No Game yet .</div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

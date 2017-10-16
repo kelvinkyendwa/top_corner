@@ -1,0 +1,12 @@
+<div class="ui grid">
+    <br>
+    <form class="ui form" action="" method="post" enctype="multipart/form-data">
+      <legend>Review A Game</legend>
+    {% csrf_token %}
+    {% include 'arsenal/form-template.html' %}
+    
+    <button type="submit" name="button" class="ui button">Submit Review</button>
+    
+    </form>
+    
+    </div>
