@@ -1,4 +1,4 @@
-{% extends 'arsenal/base.html' %}
+{% extends 'base.html' %}
 
 {% block title%}Login {% endblock %}
 
@@ -15,9 +15,9 @@
     <hr>
         
         <div class="jumbotron bg-info">Welcome 
-            <a class="btn btn-danger-outline" href="/account/login/"> Login <i class="fa fa-power-off" aria-hidden="true"></i></a>
+            <a class="btn btn-danger-outline" href="{% url 'accounts:logout' %}"> Logout <i class="fa fa-power-off" aria-hidden="true"></i></a>
             or 
-            <a class="btn btn-danger-outline" href="/account/login/"> Register <i class="fa fa-address-book-o" aria-hidden="true"></i></a>
+            <a class="btn btn-danger-outline" href="{% url 'accounts:login' %}"> Register <i class="fa fa-address-book-o" aria-hidden="true"></i></a>
         </div>
 
 </div>

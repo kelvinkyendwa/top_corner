@@ -1,7 +1,23 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
+
 # Create your models here.
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    description = models.CharField(max_length=100, default='')
+    city = models.CharField(max_length=100, default='')
+    website = models.URLField(default='')
+    phone= models.IntegerField(default=0)
+def create_profile(sender, **kwargs):
+    if kwargs['created']:
+        user_profile = UserProfile.objects.create(user=kwargs['instance'])
+
+post_save.connect(create_profile, sender=User)
+
 
 class Team(models.Model):
     name = models.CharField(max_length=200)
@@ -11,7 +27,7 @@ class Team(models.Model):
 
 class Pundit(models.Model):
     pundit_name = models.CharField(max_length=200)
-    favorite_club =  models.ForeignKey(Team, on_delete=models.CASCADE)
+    favorite_club = models.ForeignKey(Team, on_delete=models.CASCADE) 
     def __str__(self):
         return self.pundit_name
 
